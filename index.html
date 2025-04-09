@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags - ИЗМЕНЕНО для Продавцов -->
+    <title>Привлекайте Локальных Клиентов | Платформа Продвижения для Продавцов [Ваше Название]</title>
+    <meta name="description" content="Увеличьте продажи в вашем офлайн магазине! Присоединяйтесь к платформе [Ваше Название] и продвигайте свои товары и услуги среди клиентов в вашем регионе. Просто отправьте прайс - мы позаботимся о рекламе.">
+    <meta name="keywords" content="реклама для продавцов, продвижение локального бизнеса, привлечение клиентов, офлайн магазины, партнерская программа для продавцов, реклама товаров, реклама услуг, локальный маркетинг">
+
+    <!-- Favicon (Оставляем ваш) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <!-- <link rel="icon" href="https://cdn.glitch.global/a2a85e01-02b1-4df6-8a9f-678047d53743/ikeber.svg?v=1743845475305" type="image/svg+xml"> -->
+
+    <!-- === CDN Libraries: CSS (Оставляем без изменений) === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- === Custom CSS (Оставляем ваш стиль, он достаточно универсален) === -->
+    <style>
+        /* --- Base Styles & Variables --- */
+        :root {
+            --primary-color: #292d30;
+            --secondary-color: #f8f9fa;
+            --accent-color: #32bcf6;
+            --accent-color-secondary: #d7277b;
+            --text-color: #343a40;
+            --light-text: #6c757d;
+            --white-text: #ffffff;
+            --heading-font: 'Poppins', sans-serif;
+            --body-font: 'Merriweather', serif;
+            --base-font-size: 16px;
+            --transition-speed: 0.3s;
+        }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+        body { font-family: var(--body-font); font-size: var(--base-font-size); color: var(--text-color); line-height: 1.7; background-color: var(--white-text); }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--heading-font); font-weight: 600; color: var(--primary-color); margin-bottom: 1rem; }
+        h1 { font-size: 2.8rem; font-weight: 700; }
+        h2 { font-size: 2.2rem; }
+        h3 { font-size: 1.8rem; }
+        a { color: var(--accent-color); text-decoration: none; transition: color var(--transition-speed) ease; }
+        a:hover { color: #1c9ddb; }
+
+        .btn-primary { background-color: var(--accent-color); border-color: var(--accent-color); color: var(--white-text); font-family: var(--heading-font); padding: 0.8rem 1.8rem; font-size: 1rem; font-weight: 500; transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease, transform var(--transition-speed) ease, color var(--transition-speed) ease; border-radius: 50px; }
+        .btn-primary:hover { background-color: var(--accent-color-secondary); border-color: var(--accent-color-secondary); color: var(--white-text); transform: translateY(-2px); }
+        .btn-outline-primary { color: var(--accent-color); border-color: var(--accent-color); font-family: var(--heading-font); padding: 0.8rem 1.8rem; font-size: 1rem; font-weight: 500; transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, transform var(--transition-speed) ease; border-radius: 50px; }
+        .btn-outline-primary:hover { background-color: var(--accent-color); color: var(--white-text); transform: translateY(-2px); }
+
+        section { padding: 80px 0; }
+        section:nth-of-type(even) { background-color: var(--secondary-color); }
+
+        .section-title { text-align: center; margin-bottom: 50px; position: relative; padding-bottom: 15px; }
+        .section-title h2 { margin-bottom: 10px; position: relative; display: inline-block; padding-bottom: 10px; color: var(--primary-color); }
+         .section-title h2::after { content: ''; position: absolute; display: block; width: 60px; height: 3px; background: var(--accent-color); bottom: 0; left: 50%; transform: translateX(-50%); }
+        .section-title p { color: var(--light-text); max-width: 600px; margin: 0 auto; }
+
+        /* --- Header / Navigation --- */
+        .navbar { padding: 0.8rem 0; background-color: var(--primary-color); box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); transition: background-color var(--transition-speed) ease, padding var(--transition-speed) ease; }
+        .navbar.scrolled { padding: 0.5rem 0; background-color: rgba(41, 45, 48, 0.95); backdrop-filter: blur(5px); }
+        .navbar-brand img { height: 40px; width: auto; }
+        .navbar-toggler { border-color: rgba(255, 255, 255, 0.1); }
+        .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+        .navbar-nav .nav-link { font-family: var(--heading-font); font-weight: 500; color: var(--white-text); padding: 0.5rem 1rem; position: relative; transition: color var(--transition-speed) ease; }
+        .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover { color: var(--accent-color); }
+         .navbar-nav .nav-link::before { content: ""; position: absolute; bottom: 0; left: 1rem; right: 1rem; height: 2px; background-color: var(--accent-color); transform: scaleX(0); transition: transform var(--transition-speed) ease-in-out; transform-origin: bottom right; }
+         .navbar-nav .nav-link:hover::before, .navbar-nav .nav-link.active::before { transform: scaleX(1); transform-origin: bottom left; }
+
+        /* --- Hero Section --- */
+        #hero { height: 100vh; min-height: 600px; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white-text); background: linear-gradient(rgba(41, 45, 48, 0.8), rgba(41, 45, 48, 0.8)), url('https://cdn.glitch.global/a2a85e01-02b1-4df6-8a9f-678047d53743/image_fx%20(4).jpg?v=1743777071758') center center/cover no-repeat; position: relative; padding: 0; }
+        .hero-content { max-width: 800px; animation: fadeIn 1s ease-in-out; }
+        .hero-content h1 { font-size: 3.5rem; color: var(--white-text); margin-bottom: 1rem; font-weight: 700; }
+        .hero-content .subtitle { font-size: 1.4rem; font-weight: 400; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.9); }
+        .typed-cursor { opacity: 1; animation: blink 0.7s infinite; color: var(--accent-color-secondary); font-weight: bold; }
+        @keyframes blink{ 0% { opacity:1; } 50% { opacity:0; } 100% { opacity:1; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- About Section --- */
+        #about { background-color: var(--white-text); }
+        #about .about-img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+        #about .content h3 { font-weight: 700; font-size: 2rem; color: var(--primary-color); }
+        #about .content ul { list-style: none; padding: 0; }
+        #about .content ul li { padding-left: 28px; position: relative; margin-bottom: 10px; }
+        #about .content ul i { position: absolute; left: 0; top: 2px; font-size: 20px; color: var(--accent-color); }
+
+        /* --- Services / How It Works Section --- */
+        #how-it-works { background-color: var(--secondary-color); } /* ИЗМЕНЕН ID и фон */
+        .how-it-works-item { /* ИЗМЕНЕН КЛАСС */
+            background-color: var(--white-text); padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; height: 100%; border: 1px solid #eee;
+        }
+        .how-it-works-item:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(41, 45, 48, 0.1); }
+        .how-it-works-item .icon { font-size: 3rem; color: var(--accent-color); margin-bottom: 20px; display: inline-block; transition: transform var(--transition-speed) ease, color var(--transition-speed) ease; }
+         .how-it-works-item:hover .icon { transform: scale(1.1); color: var(--accent-color-secondary); }
+        .how-it-works-item h4 { font-size: 1.4rem; font-weight: 600; margin-bottom: 15px; color: var(--primary-color); }
+        .how-it-works-item p { color: var(--light-text); font-size: 0.95rem; }
+
+        /* --- Team Section --- */
+         #team { background-color: var(--white-text); }
+        .team-member { background: var(--white-text); border-radius: 8px; overflow: hidden; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; height: 100%; border: 1px solid #eee; }
+        .team-member:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(41, 45, 48, 0.12); }
+        .team-member img { max-width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
+        .team-member .member-info { padding: 25px 20px; }
+        .team-member h4 { font-size: 1.3rem; margin-bottom: 5px; color: var(--primary-color); }
+        .team-member span { display: block; font-size: 0.9rem; color: var(--light-text); margin-bottom: 15px; font-style: italic; }
+        .team-member .social a { color: var(--primary-color); margin: 0 8px; font-size: 1.1rem; transition: color var(--transition-speed) ease; }
+        .team-member .social a:hover { color: var(--accent-color-secondary); }
+
+         /* --- Cases / Success Stories Section --- */
+         #success-stories { background-color: var(--secondary-color); } /* ИЗМЕНЕН ID */
+        .stories-slider .swiper-slide { /* ИЗМЕНЕН КЛАСС */
+            background: var(--white-text); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); border: 1px solid #eee;
+        }
+        .stories-slider img { display: block; width: 100%; height: 250px; object-fit: cover; }
+        .stories-slider .story-info { padding: 20px; } /* ИЗМЕНЕН КЛАСС */
+         .stories-slider .story-info h5 { font-size: 1.2rem; margin-bottom: 10px; color: var(--primary-color); }
+         .stories-slider .story-info p { font-size: 0.9rem; color: var(--light-text); margin-bottom: 15px; }
+         .stories-slider .story-info .btn-outline-primary { padding: 0.4rem 1rem; font-size: 0.9rem; }
+
+         .stories-slider .swiper-pagination-bullet-active { background-color: var(--accent-color); }
+         .stories-slider .swiper-button-next, .stories-slider .swiper-button-prev { color: var(--accent-color); background-color: rgba(255, 255, 255, 0.7); border-radius: 50%; width: 40px; height: 40px; transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease; }
+         .stories-slider .swiper-button-next:hover, .stories-slider .swiper-button-prev:hover { color: var(--white-text); background-color: var(--accent-color); }
+         .stories-slider .swiper-button-next::after, .stories-slider .swiper-button-prev::after { font-size: 1rem; font-weight: bold; }
+
+        /* --- Testimonials Section --- */
+        #testimonials { background-color: var(--primary-color); }
+        .testimonials-slider .swiper-slide { padding: 40px 20px; color: var(--white-text); text-align: center; }
+        .testimonials-slider .testimonial-item { max-width: 700px; margin: 0 auto; }
+        .testimonials-slider .testimonial-img { width: 90px; height: 90px; border-radius: 50%; border: 4px solid rgba(255, 255, 255, 0.2); margin: 0 auto 20px auto; }
+        .testimonials-slider h3 { font-size: 1.3rem; font-weight: bold; margin-bottom: 5px; color: var(--white-text); }
+        .testimonials-slider h4 { font-size: 0.9rem; font-weight: normal; font-style: italic; margin-bottom: 20px; color: rgba(255, 255, 255, 0.7); }
+         .testimonials-slider p { font-style: italic; margin: 0 auto 15px auto; font-family: var(--body-font); line-height: 1.8; max-width: 600px; }
+        .testimonials-slider .quote-icon-left, .testimonials-slider .quote-icon-right { color: var(--accent-color-secondary); font-size: 26px; }
+        .testimonials-slider .quote-icon-left { display: inline-block; left: -5px; position: relative; top: -8px; }
+        .testimonials-slider .quote-icon-right { display: inline-block; right: -5px; position: relative; top: 8px; transform: scaleX(-1); }
+        .testimonials-slider .swiper-pagination-bullet { background-color: rgba(255, 255, 255, 0.5); }
+         .testimonials-slider .swiper-pagination-bullet-active { background-color: var(--accent-color); }
+
+        /* --- Contact Section --- */
+        #contact { background-color: var(--white-text); }
+        .contact-info { margin-bottom: 30px; }
+        .contact-info i { font-size: 1.5rem; color: var(--accent-color); float: left; width: 44px; height: 44px; background: #eafaff; display: flex; justify-content: center; align-items: center; border-radius: 50px; transition: all var(--transition-speed) ease-in-out; }
+         .contact-info:hover i { background: var(--accent-color); color: var(--white-text); }
+        .contact-info h4 { padding: 0 0 0 60px; font-size: 1.3rem; font-weight: 600; margin-bottom: 5px; color: var(--primary-color); }
+        .contact-info p { padding: 0 0 10px 60px; margin-bottom: 0; font-size: 1rem; color: var(--light-text); line-height: 1.5; }
+         .contact-info a { color: var(--light-text); }
+         .contact-info a:hover { color: var(--accent-color); }
+        .contact .info iframe { border-radius: 8px; }
+
+        .contact-form .form-label { font-family: var(--heading-font); font-weight: 500; margin-bottom: 5px; font-size: 0.9rem; color: var(--primary-color); }
+        .contact-form .form-control { border-radius: 8px; box-shadow: none; font-size: 0.95rem; padding: 0.75rem 1rem; border: 1px solid #ced4da; transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease; }
+         .contact-form .form-control:focus { border-color: var(--accent-color); box-shadow: 0 0 0 0.2rem rgba(50, 188, 246, 0.25); }
+         .contact-form textarea.form-control { min-height: 140px; }
+         .contact-form .btn-primary { width: auto; padding: 12px 35px; }
+         .parsley-errors-list { margin: 5px 0 0 0; padding: 0; list-style-type: none; font-size: 0.85em; color: #dc3545; }
+         input.parsley-error, textarea.parsley-error { border-color: #dc3545; }
+          input.parsley-error:focus, textarea.parsley-error:focus { border-color: #dc3545; box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
+         #form-message { margin-top: 15px; font-weight: 500; }
+         #form-message.alert { padding: 0.8rem 1rem; }
+         .success-message { color: #198754; background-color: #d1e7dd; border-color: #badbcc;}
+         .error-message { color: #dc3545; background-color: #f8d7da; border-color: #f5c2c7;}
+
+        /* --- Footer --- */
+        #footer { background: var(--primary-color); color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; padding: 60px 0 40px 0; }
+        #footer .footer-logo img { height: 45px; width: auto; margin-bottom: 20px; }
+        #footer p { margin-bottom: 15px; font-family: var(--body-font); line-height: 1.7; }
+        #footer .social-links a { display: inline-flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.1); color: var(--white-text); margin-right: 8px; width: 38px; height: 38px; border-radius: 50%; transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease; }
+        #footer .social-links a:hover { background: var(--accent-color); color: var(--white-text); }
+        #footer .copyright { text-align: center; padding-top: 30px; margin-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); }
+         #footer .copyright strong { color: var(--white-text); }
+         #footer .copyright a { color: var(--accent-color); }
+          #footer .copyright a:hover { color: var(--accent-color-secondary); }
+         #footer .copyright i.fa-heart { color: var(--accent-color-secondary); margin: 0 3px; }
+
+        /* --- Back to top button --- */
+        .back-to-top { position: fixed; visibility: hidden; opacity: 0; right: 15px; bottom: 15px; z-index: 996; background: var(--accent-color); width: 40px; height: 40px; border-radius: 50px; transition: all 0.4s; }
+        .back-to-top i { font-size: 24px; color: var(--white-text); line-height: 0; }
+        .back-to-top:hover { background: var(--accent-color-secondary); color: var(--white-text); }
+        .back-to-top.active { visibility: visible; opacity: 1; }
+
+        /* --- Responsive Adjustments (Оставляем без изменений) --- */
+        @media (min-width: 768px) {
+            h1 { font-size: 3.2rem; } h2 { font-size: 2.5rem; } .hero-content h1 { font-size: 4rem; } .hero-content .subtitle { font-size: 1.5rem; } .navbar-nav .nav-link { padding: 0.5rem 1.2rem; }
+        }
+        @media (min-width: 992px) {
+            h1 { font-size: 3.5rem; } h2 { font-size: 2.8rem; } .hero-content h1 { font-size: 4.5rem; } .hero-content .subtitle { font-size: 1.6rem; } section { padding: 100px 0; } .navbar { padding: 1rem 0; } .navbar.scrolled { padding: 0.8rem 0; }
+        }
+         @media (min-width: 1200px) {
+             .container, .container-lg, .container-md, .container-sm, .container-xl { max-width: 1140px; }
+        }
+        [data-aos] { }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <nav class="navbar navbar-expand-lg w-100">
+            <div class="container">
+                <a class="navbar-brand" href="#hero">
+                    <img src="https://cdn.glitch.global/a2a85e01-02b1-4df6-8a9f-678047d53743/ikeber.svg?v=1743845475305" alt="Ikeber Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#hero">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">О Платформе</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="#how-it-works">Как это работает</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="#team">Команда</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#success-stories">Истории успеха</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonials">Отзывы партнеров</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Стать партнером</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Привлекайте Больше Клиентов в Ваш Магазин <span class="typed" data-typed-items="эффективно, локально, просто"></span></h1>
+                <p class="subtitle">Увеличьте продажи вашего офлайн магазина с помощью нашей платформы. Мы привлекаем клиентов, которые ищут товары и услуги рядом с вами.</p>
+                <a href="#contact" class="btn btn-primary scrollto">Стать Партнером</a>
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Почему [Ваше Название] - Идеальная Платформа для Продвижения Вашего Магазина?</h2>
+                    <p>Мы специализируемся на локальном продвижении офлайн магазинов, помогая вам находить клиентов поблизости.</p>
+                </div>
+
+                <div class="row content align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                         <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" class="img-fluid about-img" alt="Партнерство с платформой продвижения">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200">
+                        <h3>Преимущества партнерства с нами:</h3>
+                        <p>
+                            [Ваше Название] – это платформа, разработанная специально для продвижения офлайн магазинов и локальных услуг. Мы понимаем особенности локального рынка и предлагаем эффективные решения для привлечения клиентов в ваш бизнес.
+                        </p>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Локальный охват:</strong> Мы привлекаем клиентов именно в вашем районе, гарантируя целевой трафик в ваш магазин.</li>
+                            <li><i class="fas fa-bullhorn"></i> <strong>Эффективная реклама:</strong> Мы используем проверенные методы продвижения, чтобы ваши товары и услуги увидели потенциальные покупатели.</li>
+                            <li><i class="fas fa-handshake"></i> <strong>Простое начало:</strong> От вас нужен только прайс-лист. Все остальное – создание рекламы, продвижение – мы берем на себя.</li>
+                             <li><i class="fas fa-percent"></i> <strong>Увеличение продаж:</strong> Наша цель – привести больше клиентов в ваш магазин и увеличить ваши продажи.</li>
+                        </ul>
+                        <p>
+                            Начните привлекать больше локальных клиентов уже сегодня! Станьте партнером [Ваше Название] и выведите свой бизнес на новый уровень.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Section -->
+
+        <!-- ======= How It Works Section (Бывшая Services) ======= -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                 <div class="section-title" data-aos="fade-up">
+                    <h2>Как начать продвижение вашего магазина на [Ваше Название]: 3 простых шага</h2>
+                    <p>Процесс подключения к нашей платформе максимально прост и не займет много времени.</p>
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="how-it-works-item">
+                            <div class="icon"><i class="fas fa-upload"></i></div>
+                            <h4>1. Отправьте Ваш Прайс-лист</h4>
+                            <p>Просто отправьте нам ваш актуальный прайс-лист или каталог товаров/услуг. Это все, что нужно для начала.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="how-it-works-item">
+                            <div class="icon"><i class="fas fa-magic"></i></div>
+                            <h4>2. Мы Создаем Рекламу</h4>
+                            <p>Наши специалисты создадут эффективные рекламные объявления и подборки на основе вашего прайс-листа.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                         <div class="how-it-works-item">
+                            <div class="icon"><i class="fas fa-users"></i></div>
+                            <h4>3. Привлекайте Локальных Клиентов</h4>
+                            <p>Мы покажем ваши предложения клиентам, которые ищут товары и услуги в вашем районе, увеличивая поток покупателей в ваш магазин.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End How It Works Section -->
+
+         <!-- ======= Team Section ======= -->
+        <section id="team" class="team">
+            <div class="container">
+                 <div class="section-title" data-aos="fade-up">
+                    <h2>Команда, Которая Работает на Ваш Успех</h2>
+                    <p>Познакомьтесь с нашей командой экспертов по локальному продвижению и рекламе для офлайн магазинов.</p>
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=761&q=80" alt="Фото члена команды: Анна Иванова">
+                            <div class="member-info">
+                                <h4>Анна Иванова</h4>
+                                <span>Менеджер по работе с партнерами</span>
+                                <div class="social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                         <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="Фото члена команды: Петр Смирнов">
+                            <div class="member-info">
+                                <h4>Петр Смирнов</h4>
+                                <span>Эксперт по локальному маркетингу</span>
+                                <div class="social">
+                                     <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                         <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Фото члена команды: Ольга Васильева">
+                            <div class="member-info">
+                                <h4>Ольга Васильева</h4>
+                                <span>Специалист по рекламе</span>
+                                 <div class="social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                         <div class="team-member">
+                             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Фото члена команды: Дмитрий Кузнецов">
+                            <div class="member-info">
+                                <h4>Дмитрий Кузнецов</h4>
+                                <span>Креативный директор</span>
+                                <div class="social">
+                                     <a href="#"><i class="fab fa-github"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Team Section -->
+
+        <!-- ======= Success Stories Section (Бывшая Cases) ======= -->
+        <section id="success-stories" class="success-stories">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Истории Успеха Магазинов-Партнеров</h2>
+                    <p>Посмотрите, как [Ваше Название] помог другим офлайн магазинам привлечь больше клиентов и увеличить прибыль.</p>
+                </div>
+
+                <div class="swiper stories-slider" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                             <a href="https://images.unsplash.com/photo-1593344484962-796b55d4ea40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" data-fancybox="gallery" data-caption="Увеличение посещаемости локального магазина одежды">
+                                <img src="https://images.unsplash.com/photo-1593344484962-796b55d4ea40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Пример Истории 1: Магазин одежды">
+                             </a>
+                            <div class="story-info">
+                                <h5>Магазин одежды "Модный Уголок"</h5>
+                                <p>Благодаря продвижению на [Ваше Название], посещаемость магазина выросла на 30% за первый месяц, а продажи увеличились на 20%.</p>
+                                <a href="#contact" class="btn btn-sm btn-outline-primary">Начать продвижение</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-fancybox="gallery" data-caption="Привлечение клиентов в кофейню">
+                                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Пример Истории 2: Кофейня">
+                             </a>
+                            <div class="story-info">
+                                <h5>Кофейня "Ароматный Кофе"</h5>
+                                <p>С помощью [Ваше Название] мы смогли привлечь новых посетителей из окрестных районов и увеличить средний чек на 15%.</p>
+                               <a href="#contact" class="btn btn-sm btn-outline-primary">Начать продвижение</a>
+                            </div>
+                        </div>
+                         <div class="swiper-slide">
+                             <a href="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" data-fancybox="gallery" data-caption="Рост заказов в местной пекарне">
+                                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Пример Истории 3: Пекарня">
+                             </a>
+                            <div class="story-info">
+                                <h5>Пекарня "Свежий Хлеб"</h5>
+                                <p>[Ваше Название] помог нам рассказать о наших фирменных пирогах жителям района, что привело к увеличению заказов на 25%.</p>
+                                <a href="#contact" class="btn btn-sm btn-outline-primary">Начать продвижение</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                             <a href="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-fancybox="gallery" data-caption="Привлечение клиентов в салон красоты">
+                                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Пример Истории 4: Салон красоты">
+                             </a>
+                            <div class="story-info">
+                                <h5>Салон красоты "Очарование"</h5>
+                                <p>Мы получили новых клиентов на услуги маникюра и стрижек благодаря таргетированной рекламе через [Ваше Название].</p>
+                                <a href="#contact" class="btn btn-sm btn-outline-primary">Начать продвижение</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination position-relative mt-4"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section><!-- End Success Stories Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2 style="color: var(--white-text);">Отзывы Магазинов-Партнеров</h2>
+                    <p style="color: rgba(255, 255, 255, 0.8);">Узнайте, что говорят владельцы магазинов, которые уже воспользовались нашей платформой.</p>
+                     <style> #testimonials .section-title h2::after { background: var(--accent-color); } </style>
+                </div>
+
+                <div class="swiper testimonials-slider" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="testimonial-img" alt="Фото партнера 1">
+                                <h3>Игорь Семенов</h3>
+                                <h4>Владелец магазина электроники</h4>
+                                <p>
+                                    <i class="fas fa-quote-left quote-icon-left"></i>
+                                    [Ваше Название] стал для нас отличным инструментом для привлечения покупателей в наш магазин. Реклама работает, клиенты приходят, продажи растут. Рекомендую!
+                                    <i class="fas fa-quote-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" class="testimonial-img" alt="Фото партнера 2">
+                                <h3>Светлана Белова</h3>
+                                <h4>Владелица цветочного магазина</h4>
+                                <p>
+                                    <i class="fas fa-quote-left quote-icon-left"></i>
+                                    Очень довольны сотрудничеством с [Ваше Название]. Платформа помогла нам рассказать о наших уникальных букетах и привлечь новых клиентов для доставки цветов по городу.
+                                    <i class="fas fa-quote-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                         <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="https://randomuser.me/api/portraits/men/61.jpg" class="testimonial-img" alt="Фото партнера 3">
+                                <h3>Андрей Волков</h3>
+                                <h4>Директор мебельного салона</h4>
+                                <p>
+                                    <i class="fas fa-quote-left quote-icon-left"></i>
+                                   Благодаря [Ваше Название] мы смогли увеличить поток посетителей в наш мебельный салон. Особенно эффективно сработала реклама на новые коллекции. Спасибо за помощь!
+                                    <i class="fas fa-quote-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                    </div>
+                    <div class="swiper-pagination position-relative mt-4"></div>
+                </div>
+            </div>
+        </section><!-- End Testimonials Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+                 <div class="section-title" data-aos="fade-up">
+                    <h2>Станьте Партнером и Начните Привлекать Клиентов Уже Сегодня!</h2>
+                    <p>Отправьте нам ваш прайс-лист, и мы свяжемся с вами для обсуждения деталей сотрудничества.</p>
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+                        <div class="info">
+                            <div class="address contact-info">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Наш адрес:</h4>
+                                    <p>ул. Примерная, д. 10, офис 505,<br>г. Москва, 123456</p>
+                                </div>
+                            </div>
+                            <div class="email contact-info">
+                                <i class="fas fa-envelope"></i>
+                                 <div>
+                                     <h4>Email для партнеров:</h4>
+                                     <p><a href="mailto:partners@expert-quality.ru">partners@expert-quality.ru</a></p>
+                                 </div>
+                            </div>
+                            <div class="phone contact-info">
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <h4>Телефон:</h4>
+                                    <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                                </div>
+                            </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.4200000000003!2d37.615522!3d55.75222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d7f3c7%3A0x420c447efe6d4b4a!2sMoscow%2C%20Russia!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+                        <form action="#" method="post" role="form" class="php-email-form" id="contact-form" data-parsley-validate>
+                             <div id="form-message" class="mb-3"></div>
+                            <div class="row">
+                                <div class="form-group col-md-6 mb-3">
+                                    <label for="name" class="form-label">Ваше имя</label>
+                                    <input type="text" name="name" class="form-control" id="name" required data-parsley-minlength="2" data-parsley-trigger="change">
+                                </div>
+                                <div class="form-group col-md-6 mb-3">
+                                    <label for="email" class="form-label">Ваш Email</label>
+                                    <input type="email" class="form-control" name="email" id="email" required data-parsley-type="email" data-parsley-trigger="change">
+                                </div>
+                            </div>
+                             <div class="form-group mb-3">
+                                <label for="company" class="form-label">Название вашего магазина</label>
+                                <input type="text" class="form-control" name="company" id="company" required data-parsley-minlength="2" data-parsley-trigger="change">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="subject" class="form-label">Тема (Партнерство)</label>
+                                <input type="text" class="form-control" name="subject" id="subject" value="Запрос на партнерство" readonly required data-parsley-minlength="5" data-parsley-trigger="change">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="message" class="form-label">Кратко опишите ваш магазин и что вы предлагаете</label>
+                                <textarea class="form-control" name="message" rows="5" id="message" required data-parsley-minlength="10" data-parsley-trigger="change"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Отправить Заявку на Партнерство</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                 <div class="col-lg-6">
+                      <a href="#hero" class="footer-logo d-inline-block">
+                           <img src="https://cdn.glitch.global/a2a85e01-02b1-4df6-8a9f-678047d53743/ikeber.svg?v=1743845475305" alt="Ikeber Logo Footer">
+                      </a>
+                      <p>[Ваше Название] - платформа для продвижения вашего локального бизнеса. Привлекаем клиентов к вашим товарам и услугам.</p>
+                      <div class="social-links mt-3">
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                 </div>
+            </div>
+
+            <div class="copyright">
+                © Copyright <strong id="copyright-year"></strong> <span>[Ваше Название Платформы / Ikeber Partners]</span>. Все права защищены.
+                 <br>Дизайн разработан с <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
+
+
+    <!-- === CDN Libraries: JavaScript (Оставляем без изменений) === -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/i18n/ru.min.js" integrity="sha512-Lb8P0J1QvRUQ3U6t8XlnZ9W0888/xHVZFLoUfPLzz8c456Q9Y9fJ9oG/fI9h+0s/wxtkU5vj7jE4G+yHqPqOqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- === Custom JavaScript (Вносим минимальные правки) === -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            AOS.init({ duration: 800, easing: 'ease-in-out', once: true, mirror: false });
+
+            const typedElement = document.querySelector('.typed');
+            if (typedElement) {
+                let typed_strings = typedElement.getAttribute('data-typed-items');
+                typed_strings = typed_strings.split(',');
+                new Typed('.typed', {
+                    strings: typed_strings,
+                    loop: true,
+                    typeSpeed: 70,
+                    backSpeed: 50,
+                    backDelay: 2000
+                });
+            }
+
+            const header = document.getElementById('header');
+            if (header) {
+                const headerScrolled = () => {
+                    header.classList.toggle('scrolled', window.scrollY > 50);
+                }
+                window.addEventListener('load', headerScrolled);
+                document.addEventListener('scroll', headerScrolled);
+            }
+
+             let navbarlinks = document.querySelectorAll('#navbarNav .nav-link');
+             const navbarlinksActive = () => {
+                let position = window.scrollY + 200;
+                navbarlinks.forEach(navbarlink => {
+                    if (!navbarlink.hash) return;
+                    let section = document.querySelector(navbarlink.hash);
+                    if (!section) return;
+                    if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+                        navbarlink.classList.add('active');
+                    } else {
+                        navbarlink.classList.remove('active');
+                    }
+                })
+             }
+            window.addEventListener('load', navbarlinksActive);
+            document.addEventListener('scroll', navbarlinksActive);
+
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse && !bootstrap.Collapse.getInstance(navbarCollapse)) {
+                 new bootstrap.Collapse(navbarCollapse, { toggle: false });
+            }
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (navbarToggler && !navbarToggler.classList.contains('collapsed') && navbarCollapse.classList.contains('show')) {
+                         const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
+                         if (collapseInstance) { collapseInstance.hide(); }
+                     }
+                });
+            });
+
+             new Swiper('.stories-slider', {
+                speed: 600, loop: true, autoplay: { delay: 5000, disableOnInteraction: false }, slidesPerView: 'auto',
+                pagination: { el: '.stories-slider .swiper-pagination', type: 'bullets', clickable: true },
+                navigation: { nextEl: '.stories-slider .swiper-button-next', prevEl: '.stories-slider .swiper-button-prev' },
+                breakpoints: { 320: { slidesPerView: 1, spaceBetween: 20 }, 768: { slidesPerView: 2, spaceBetween: 30 }, 992: { slidesPerView: 3, spaceBetween: 30 }, 1200: { slidesPerView: 3, spaceBetween: 40 } }
+            });
+
+            new Swiper('.testimonials-slider', {
+                speed: 600, loop: true, autoplay: { delay: 6000, disableOnInteraction: false }, slidesPerView: 1, spaceBetween: 30,
+                 pagination: { el: '.testimonials-slider .swiper-pagination', type: 'bullets', clickable: true },
+            });
+
+            Fancybox.bind("[data-fancybox]", { Thumbs: false, Toolbar: { display: [ "zoom", "slideShow", "close" ] } });
+
+            const backtotop = document.querySelector('.back-to-top');
+            if (backtotop) {
+                const toggleBacktotop = () => { backtotop.classList.toggle('active', window.scrollY > 100); }
+                window.addEventListener('load', toggleBacktotop);
+                document.addEventListener('scroll', toggleBacktotop);
+                backtotop.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+            }
+
+             const copyrightYear = document.getElementById('copyright-year');
+             if (copyrightYear) { copyrightYear.textContent = dayjs().format('YYYY'); }
+
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+             if(contactForm) {
+                window.Parsley.setLocale('ru');
+                const parsleyInstance = $(contactForm).parsley();
+
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    parsleyInstance.validate();
+
+                    if (parsleyInstance.isValid()) {
+                        formMessage.textContent = 'Отправка заявки...';
+                        formMessage.className = 'alert alert-info';
+                        formMessage.style.display = 'block';
+
+                        // --- ИМИТАЦИЯ ОТПРАВКИ ---
+                        // Замените этот setTimeout на ваш реальный AJAX/Fetch запрос
+                        setTimeout(() => {
+                            formMessage.textContent = 'Ваша заявка на партнерство успешно отправлена! Мы скоро свяжемся с вами.';
+                            formMessage.className = 'alert alert-success success-message';
+                            contactForm.reset();
+                            parsleyInstance.reset();
+                        }, 2000);
+                        // --- КОНЕЦ ИМИТАЦИИ ---
+
+                    } else {
+                        formMessage.textContent = 'Пожалуйста, проверьте правильность заполнения полей формы.';
+                        formMessage.className = 'alert alert-danger error-message';
+                        formMessage.style.display = 'block';
+                    }
+                });
+
+                 contactForm.querySelectorAll('input, textarea').forEach(input => {
+                     input.addEventListener('input', () => {
+                         if (formMessage.textContent !== '' && formMessage.textContent !== 'Отправка заявки...') {
+                             formMessage.textContent = '';
+                             formMessage.style.display = 'none';
+                         }
+                     });
+                 });
+             }
+        });
+    </script>
+
+</body>
+</html>
