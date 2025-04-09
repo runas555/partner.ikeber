@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags - ИЗМЕНЕНО для Продавцов -->
-    <title>Привлекайте Локальных Клиентов | Платформа Продвижения для Продавцов [Ваше Название]</title>
-    <meta name="description" content="Увеличьте продажи в вашем офлайн магазине! Присоединяйтесь к платформе [Ваше Название] и продвигайте свои товары и услуги среди клиентов в вашем регионе. Просто отправьте прайс - мы позаботимся о рекламе.">
-    <meta name="keywords" content="реклама для продавцов, продвижение локального бизнеса, привлечение клиентов, офлайн магазины, партнерская программа для продавцов, реклама товаров, реклама услуг, локальный маркетинг">
+    <!-- SEO Meta Tags - Адаптировано для продавцов -->
+    <title>Привлекайте Больше Клиентов в Ваш Магазин | Платформа Локальной Рекламы [Ваше Название/Ikeber Partners]</title>
+    <meta name="description" content="Увеличьте поток клиентов в Ваш офлайн-магазин с помощью нашей платформы локальной рекламы. Мы помогаем местным бизнесам находить покупателей рядом. Присоединяйтесь!">
+    <meta name="keywords" content="локальная реклама, реклама для магазинов, привлечение клиентов, офлайн магазин, продвижение бизнеса, местный маркетинг, увеличить продажи, платформа для бизнеса, [Ваше Название]">
 
     <!-- Favicon (Оставляем ваш) -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
     <!-- <link rel="icon" href="https://cdn.glitch.global/a2a85e01-02b1-4df6-8a9f-678047d53743/ikeber.svg?v=1743845475305" type="image/svg+xml"> -->
 
-    <!-- === CDN Libraries: CSS (Оставляем без изменений) === -->
+    <!-- === CDN Libraries: CSS (Без изменений) === -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
-    <!-- === Custom CSS (Оставляем ваш стиль, он достаточно универсален) === -->
+    <!-- === Custom CSS (С исправлениями для Hero и Mobile) === -->
     <style>
         /* --- Base Styles & Variables --- */
         :root {
@@ -41,7 +41,7 @@
         }
 
         html { scroll-behavior: smooth; scroll-padding-top: 70px; }
-        body { font-family: var(--body-font); font-size: var(--base-font-size); color: var(--text-color); line-height: 1.7; background-color: var(--white-text); }
+        body { font-family: var(--body-font); font-size: var(--base-font-size); color: var(--text-color); line-height: 1.7; background-color: var(--white-text); overflow-x: hidden; /* Предотвращаем горизонтальный скролл */ }
         h1, h2, h3, h4, h5, h6 { font-family: var(--heading-font); font-weight: 600; color: var(--primary-color); margin-bottom: 1rem; }
         h1 { font-size: 2.8rem; font-weight: 700; }
         h2 { font-size: 2.2rem; }
@@ -74,13 +74,80 @@
          .navbar-nav .nav-link:hover::before, .navbar-nav .nav-link.active::before { transform: scaleX(1); transform-origin: bottom left; }
 
         /* --- Hero Section --- */
-        #hero { height: 100vh; min-height: 600px; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white-text); background: linear-gradient(rgba(41, 45, 48, 0.8), rgba(41, 45, 48, 0.8)), url('https://cdn.glitch.global/a2a85e01-02b1-4df6-8a9f-678047d53743/image_fx%20(4).jpg?v=1743777071758') center center/cover no-repeat; position: relative; padding: 0; }
-        .hero-content { max-width: 800px; animation: fadeIn 1s ease-in-out; }
-        .hero-content h1 { font-size: 3.5rem; color: var(--white-text); margin-bottom: 1rem; font-weight: 700; }
-        .hero-content .subtitle { font-size: 1.4rem; font-weight: 400; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.9); }
+        #hero {
+            min-height: 500px; /* Уменьшаем минимальную высоту для мобильных */
+            height: auto; /* Автоматическая высота, чтобы контент определял ее */
+            padding: 120px 0 80px 0; /* Добавляем отступы сверху и снизу для мобильных */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white-text);
+            background: linear-gradient(rgba(41, 45, 48, 0.8), rgba(41, 45, 48, 0.8)), url('https://cdn.glitch.global/a2a85e01-02b1-4df6-8a9f-678047d53743/image_fx%20(4).jpg?v=1743777071758') center center/cover no-repeat;
+            position: relative;
+        }
+        .hero-content {
+            max-width: 90%; /* Используем проценты для лучшей адаптивности */
+            margin: 0 auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .hero-content h1 {
+            font-size: 2.5rem; /* Уменьшаем базовый шрифт для мобильных */
+            color: var(--white-text);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3; /* Уменьшаем межстрочный интервал */
+            min-height: 80px; /* Уменьшаем min-height, т.к. заголовок короче */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            word-break: break-word; /* Добавляем перенос длинных слов */
+            overflow-wrap: break-word;
+        }
+
+        /* Адаптация шрифта и высоты для больших экранов */
+        @media (min-width: 576px) {
+            .hero-content h1 { font-size: 3rem; min-height: 100px; }
+        }
+        @media (min-width: 768px) {
+            #hero { height: 100vh; min-height: 600px; padding: 0; } /* Возвращаем высоту для планшетов и десктопов */
+            .hero-content { max-width: 800px;}
+            .hero-content h1 { font-size: 4rem; min-height: 170px; }
+        }
+        @media (min-width: 992px) {
+            .hero-content h1 { font-size: 4.5rem; min-height: 190px; }
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.1rem; /* Уменьшаем подзаголовок на мобильных */
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+        /* Адаптация подзаголовка */
+        @media (min-width: 768px) {
+            .hero-content .subtitle { font-size: 1.5rem; }
+        }
+        @media (min-width: 992px) {
+            .hero-content .subtitle { font-size: 1.6rem; }
+        }
+
+
+        .hero-content .typed {
+             margin-left: 0.3rem; /* Немного уменьшаем отступ для мобильных */
+             display: inline-block; /* Помогает с выравниванием и переносом */
+        }
+        @media (min-width: 768px) {
+            .hero-content .typed { margin-left: 0.5rem; } /* Возвращаем отступ для больших экранов */
+        }
+
         .typed-cursor { opacity: 1; animation: blink 0.7s infinite; color: var(--accent-color-secondary); font-weight: bold; }
         @keyframes blink{ 0% { opacity:1; } 50% { opacity:0; } 100% { opacity:1; } }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- Остальные стили без изменений --- */
 
         /* --- About Section --- */
         #about { background-color: var(--white-text); }
@@ -91,10 +158,8 @@
         #about .content ul i { position: absolute; left: 0; top: 2px; font-size: 20px; color: var(--accent-color); }
 
         /* --- Services / How It Works Section --- */
-        #how-it-works { background-color: var(--secondary-color); } /* ИЗМЕНЕН ID и фон */
-        .how-it-works-item { /* ИЗМЕНЕН КЛАСС */
-            background-color: var(--white-text); padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; height: 100%; border: 1px solid #eee;
-        }
+        #how-it-works { background-color: var(--secondary-color); }
+        .how-it-works-item { background-color: var(--white-text); padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; height: 100%; border: 1px solid #eee; }
         .how-it-works-item:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(41, 45, 48, 0.1); }
         .how-it-works-item .icon { font-size: 3rem; color: var(--accent-color); margin-bottom: 20px; display: inline-block; transition: transform var(--transition-speed) ease, color var(--transition-speed) ease; }
          .how-it-works-item:hover .icon { transform: scale(1.1); color: var(--accent-color-secondary); }
@@ -113,12 +178,10 @@
         .team-member .social a:hover { color: var(--accent-color-secondary); }
 
          /* --- Cases / Success Stories Section --- */
-         #success-stories { background-color: var(--secondary-color); } /* ИЗМЕНЕН ID */
-        .stories-slider .swiper-slide { /* ИЗМЕНЕН КЛАСС */
-            background: var(--white-text); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); border: 1px solid #eee;
-        }
+         #success-stories { background-color: var(--secondary-color); }
+        .stories-slider .swiper-slide { background: var(--white-text); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); border: 1px solid #eee; }
         .stories-slider img { display: block; width: 100%; height: 250px; object-fit: cover; }
-        .stories-slider .story-info { padding: 20px; } /* ИЗМЕНЕН КЛАСС */
+        .stories-slider .story-info { padding: 20px; }
          .stories-slider .story-info h5 { font-size: 1.2rem; margin-bottom: 10px; color: var(--primary-color); }
          .stories-slider .story-info p { font-size: 0.9rem; color: var(--light-text); margin-bottom: 15px; }
          .stories-slider .story-info .btn-outline-primary { padding: 0.4rem 1rem; font-size: 0.9rem; }
@@ -161,7 +224,7 @@
          .parsley-errors-list { margin: 5px 0 0 0; padding: 0; list-style-type: none; font-size: 0.85em; color: #dc3545; }
          input.parsley-error, textarea.parsley-error { border-color: #dc3545; }
           input.parsley-error:focus, textarea.parsley-error:focus { border-color: #dc3545; box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
-         #form-message { margin-top: 15px; font-weight: 500; }
+         #form-message { margin-top: 15px; font-weight: 500; display: none; /* Скрываем по умолчанию */ }
          #form-message.alert { padding: 0.8rem 1rem; }
          .success-message { color: #198754; background-color: #d1e7dd; border-color: #badbcc;}
          .error-message { color: #dc3545; background-color: #f8d7da; border-color: #f5c2c7;}
@@ -179,17 +242,21 @@
          #footer .copyright i.fa-heart { color: var(--accent-color-secondary); margin: 0 3px; }
 
         /* --- Back to top button --- */
-        .back-to-top { position: fixed; visibility: hidden; opacity: 0; right: 15px; bottom: 15px; z-index: 996; background: var(--accent-color); width: 40px; height: 40px; border-radius: 50px; transition: all 0.4s; }
+        .back-to-top { position: fixed; visibility: hidden; opacity: 0; right: 15px; bottom: 15px; z-index: 996; background: var(--accent-color); width: 40px; height: 40px; border-radius: 50px; transition: all 0.4s; display: flex; align-items: center; justify-content: center; } /* Добавлено display flex */
         .back-to-top i { font-size: 24px; color: var(--white-text); line-height: 0; }
         .back-to-top:hover { background: var(--accent-color-secondary); color: var(--white-text); }
         .back-to-top.active { visibility: visible; opacity: 1; }
 
-        /* --- Responsive Adjustments (Оставляем без изменений) --- */
+        /* --- Responsive Adjustments (Кроме Hero) --- */
         @media (min-width: 768px) {
-            h1 { font-size: 3.2rem; } h2 { font-size: 2.5rem; } .hero-content h1 { font-size: 4rem; } .hero-content .subtitle { font-size: 1.5rem; } .navbar-nav .nav-link { padding: 0.5rem 1.2rem; }
+            h2 { font-size: 2.5rem; }
+            .navbar-nav .nav-link { padding: 0.5rem 1.2rem; }
         }
         @media (min-width: 992px) {
-            h1 { font-size: 3.5rem; } h2 { font-size: 2.8rem; } .hero-content h1 { font-size: 4.5rem; } .hero-content .subtitle { font-size: 1.6rem; } section { padding: 100px 0; } .navbar { padding: 1rem 0; } .navbar.scrolled { padding: 0.8rem 0; }
+            h2 { font-size: 2.8rem; }
+            section { padding: 100px 0; }
+            .navbar { padding: 1rem 0; }
+            .navbar.scrolled { padding: 0.8rem 0; }
         }
          @media (min-width: 1200px) {
              .container, .container-lg, .container-md, .container-sm, .container-xl { max-width: 1140px; }
@@ -244,8 +311,11 @@
     <section id="hero">
         <div class="container">
             <div class="hero-content" data-aos="fade-up">
-                <h1>Привлекайте Больше Клиентов в Ваш Магазин <span class="typed" data-typed-items="эффективно, локально, просто"></span></h1>
-                <p class="subtitle">Увеличьте продажи вашего офлайн магазина с помощью нашей платформы. Мы привлекаем клиентов, которые ищут товары и услуги рядом с вами.</p>
+                <!-- ИЗМЕНЕНО: Заголовок H1 и data-typed-items -->
+                <h1>Больше Клиентов для Вашего<span class="typed" data-typed-items=" магазина, кафе, салона, сервиса, бизнеса"></span></h1>
+                <p class="subtitle">
+                    Локальная реклама для Вашего офлайн-бизнеса. Увеличьте поток покупателей и узнаваемость бренда в Вашем районе с нашей платформой.
+                </p>
                 <a href="#contact" class="btn btn-primary scrollto">Стать Партнером</a>
             </div>
         </div>
@@ -257,61 +327,80 @@
         <section id="about" class="about">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
-                    <h2>Почему [Ваше Название] - Идеальная Платформа для Продвижения Вашего Магазина?</h2>
-                    <p>Мы специализируемся на локальном продвижении офлайн магазинов, помогая вам находить клиентов поблизости.</p>
+                    <h2>Платформа Локальной Рекламы для Вашего Бизнеса</h2>
+                    <p>Мы помогаем офлайн-магазинам и сервисам находить новых клиентов поблизости. Увеличьте продажи и привлекайте больше посетителей!</p>
                 </div>
 
                 <div class="row content align-items-center">
                     <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                         <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" class="img-fluid about-img" alt="Партнерство с платформой продвижения">
+                         <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" class="img-fluid about-img" alt="Владелец магазина анализирует данные">
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200">
-                        <h3>Преимущества партнерства с нами:</h3>
+                        <h3>Почему локальная реклама с нами — это выгодно?</h3>
                         <p>
-                            [Ваше Название] – это платформа, разработанная специально для продвижения офлайн магазинов и локальных услуг. Мы понимаем особенности локального рынка и предлагаем эффективные решения для привлечения клиентов в ваш бизнес.
+                            В современном мире клиенты ищут товары и услуги рядом с собой. Мы предлагаем эффективное решение для привлечения именно этих покупателей в Ваш магазин.
                         </p>
                         <ul>
-                            <li><i class="fas fa-map-marker-alt"></i> <strong>Локальный охват:</strong> Мы привлекаем клиентов именно в вашем районе, гарантируя целевой трафик в ваш магазин.</li>
-                            <li><i class="fas fa-bullhorn"></i> <strong>Эффективная реклама:</strong> Мы используем проверенные методы продвижения, чтобы ваши товары и услуги увидели потенциальные покупатели.</li>
-                            <li><i class="fas fa-handshake"></i> <strong>Простое начало:</strong> От вас нужен только прайс-лист. Все остальное – создание рекламы, продвижение – мы берем на себя.</li>
-                             <li><i class="fas fa-percent"></i> <strong>Увеличение продаж:</strong> Наша цель – привести больше клиентов в ваш магазин и увеличить ваши продажи.</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Точный Локальный Таргетинг:</strong> Реклама показывается только тем, кто находится рядом с Вашим магазином.</li>
+                            <li><i class="fas fa-eye"></i> <strong>Увеличение Видимости:</strong> Ваш магазин будет на виду у потенциальных клиентов, ищущих именно Ваши товары или услуги.</li>
+                            <li><i class="fas fa-shopping-basket"></i> <strong>Рост Продаж:</strong> Привлекайте больше покупателей и увеличивайте свой доход.</li>
+                             <li><i class="fas fa-chart-line"></i> <strong>Простая и Эффективная Реклама:</strong> Мы берем на себя все технические моменты, Вам нужно только предоставить информацию о магазине.</li>
                         </ul>
-                        <p>
-                            Начните привлекать больше локальных клиентов уже сегодня! Станьте партнером [Ваше Название] и выведите свой бизнес на новый уровень.
-                        </p>
+                        <p>Начните привлекать больше местных клиентов уже сегодня!</p>
                     </div>
                 </div>
             </div>
         </section><!-- End About Section -->
 
-        <!-- ======= How It Works Section (Бывшая Services) ======= -->
+        <!-- ======= How It Works Section ======= -->
         <section id="how-it-works" class="how-it-works">
             <div class="container">
                  <div class="section-title" data-aos="fade-up">
-                    <h2>Как начать продвижение вашего магазина на [Ваше Название]: 3 простых шага</h2>
-                    <p>Процесс подключения к нашей платформе максимально прост и не займет много времени.</p>
+                    <h2>Как начать привлекать клиентов в Ваш магазин</h2>
+                    <p>Всего несколько простых шагов, чтобы запустить локальную рекламу и увидеть результат.</p>
                 </div>
 
                 <div class="row gy-4">
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="how-it-works-item">
-                            <div class="icon"><i class="fas fa-upload"></i></div>
-                            <h4>1. Отправьте Ваш Прайс-лист</h4>
-                            <p>Просто отправьте нам ваш актуальный прайс-лист или каталог товаров/услуг. Это все, что нужно для начала.</p>
+                            <div class="icon"><i class="fas fa-store"></i></div>
+                            <h4>1. Расскажите о Вашем Магазине</h4>
+                            <p>Заполните простую форму заявки и предоставьте основную информацию о Вашем магазине: адрес, товары или услуги, контакты.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="how-it-works-item">
-                            <div class="icon"><i class="fas fa-magic"></i></div>
-                            <h4>2. Мы Создаем Рекламу</h4>
-                            <p>Наши специалисты создадут эффективные рекламные объявления и подборки на основе вашего прайс-листа.</p>
+                            <div class="icon"><i class="fas fa-bullhorn"></i></div>
+                            <h4>2. Запуск Рекламной Кампании</h4>
+                            <p>Мы настраиваем и запускаем Вашу рекламную кампанию на нашей платформе, ориентированную на местных покупателей.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                          <div class="how-it-works-item">
-                            <div class="icon"><i class="fas fa-users"></i></div>
-                            <h4>3. Привлекайте Локальных Клиентов</h4>
-                            <p>Мы покажем ваши предложения клиентам, которые ищут товары и услуги в вашем районе, увеличивая поток покупателей в ваш магазин.</p>
+                            <div class="icon"><i class="fas fa-street-view"></i></div>
+                            <h4>3. Привлекайте Местных Клиентов</h4>
+                            <p>Ваш магазин становится виден местным покупателям, которые ищут товары и услуги рядом с домом.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                         <div class="how-it-works-item">
+                            <div class="icon"><i class="fas fa-traffic-light"></i></div>
+                            <h4>4. Увеличивайте Поток Покупателей</h4>
+                            <p>Наблюдайте, как растет поток посетителей в Ваш магазин благодаря эффективной локальной рекламе.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                         <div class="how-it-works-item">
+                             <div class="icon"><i class="fas fa-coins"></i></div>
+                            <h4>5. Увеличивайте Продажи</h4>
+                            <p>Больше клиентов - больше продаж. Локальная реклама - это инвестиция в рост Вашего бизнеса.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                         <div class="how-it-works-item">
+                            <div class="icon"><i class="fas fa-handshake"></i></div>
+                            <h4>6. Поддержка и Развитие</h4>
+                            <p>Мы всегда готовы помочь Вам на каждом этапе и предложить лучшие решения для развития Вашего бизнеса.</p>
                         </div>
                     </div>
                 </div>
@@ -322,17 +411,17 @@
         <section id="team" class="team">
             <div class="container">
                  <div class="section-title" data-aos="fade-up">
-                    <h2>Команда, Которая Работает на Ваш Успех</h2>
-                    <p>Познакомьтесь с нашей командой экспертов по локальному продвижению и рекламе для офлайн магазинов.</p>
+                    <h2>Наша Команда Помощи Вашему Бизнесу</h2>
+                    <p>Мы - команда профессионалов, готовых помочь Вашему бизнесу расти и привлекать больше клиентов.</p>
                 </div>
 
                 <div class="row gy-4">
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="team-member">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=761&q=80" alt="Фото члена команды: Анна Иванова">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=761&q=80" alt="Фото члена команды: Анна Иванова">
                             <div class="member-info">
                                 <h4>Анна Иванова</h4>
-                                <span>Менеджер по работе с партнерами</span>
+                                <span>Менеджер по Локальной Рекламе</span>
                                 <div class="social">
                                     <a href="#"><i class="fab fa-twitter"></i></a>
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -347,7 +436,7 @@
                             <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="Фото члена команды: Петр Смирнов">
                             <div class="member-info">
                                 <h4>Петр Смирнов</h4>
-                                <span>Эксперт по локальному маркетингу</span>
+                                <span>Специалист по Привлечению Клиентов</span>
                                 <div class="social">
                                      <a href="#"><i class="fab fa-twitter"></i></a>
                                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -361,7 +450,7 @@
                             <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Фото члена команды: Ольга Васильева">
                             <div class="member-info">
                                 <h4>Ольга Васильева</h4>
-                                <span>Специалист по рекламе</span>
+                                <span>Консультант по Развитию Бизнеса</span>
                                  <div class="social">
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -376,7 +465,7 @@
                              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Фото члена команды: Дмитрий Кузнецов">
                             <div class="member-info">
                                 <h4>Дмитрий Кузнецов</h4>
-                                <span>Креативный директор</span>
+                                <span>Специалист по Рекламным Материалам</span>
                                 <div class="social">
                                      <a href="#"><i class="fab fa-github"></i></a>
                                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -388,54 +477,54 @@
             </div>
         </section><!-- End Team Section -->
 
-        <!-- ======= Success Stories Section (Бывшая Cases) ======= -->
+        <!-- ======= Success Stories Section ======= -->
         <section id="success-stories" class="success-stories">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
-                    <h2>Истории Успеха Магазинов-Партнеров</h2>
-                    <p>Посмотрите, как [Ваше Название] помог другим офлайн магазинам привлечь больше клиентов и увеличить прибыль.</p>
+                    <h2>Истории Успеха Магазинов с Локальной Рекламой</h2>
+                    <p>Посмотрите, как другие бизнесы увеличили поток клиентов и продажи благодаря нашей платформе.</p>
                 </div>
 
                 <div class="swiper stories-slider" data-aos="fade-up" data-aos-delay="100">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                             <a href="https://images.unsplash.com/photo-1593344484962-796b55d4ea40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" data-fancybox="gallery" data-caption="Увеличение посещаемости локального магазина одежды">
-                                <img src="https://images.unsplash.com/photo-1593344484962-796b55d4ea40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Пример Истории 1: Магазин одежды">
+                             <a href="https://images.unsplash.com/photo-1593344484962-796b55d4ea40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" data-fancybox="gallery" data-caption="Реклама кофейни привлекла больше посетителей">
+                                <img src="https://images.unsplash.com/photo-1593344484962-796b55d4ea40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Пример Истории 1: Кофейня">
                              </a>
                             <div class="story-info">
-                                <h5>Магазин одежды "Модный Уголок"</h5>
-                                <p>Благодаря продвижению на [Ваше Название], посещаемость магазина выросла на 30% за первый месяц, а продажи увеличились на 20%.</p>
-                                <a href="#contact" class="btn btn-sm btn-outline-primary">Начать продвижение</a>
+                                <h5>Кофейня "Уютное Место"</h5>
+                                <p>Заметили увеличение посетителей на 30% после запуска локальной рекламы. Новые клиенты говорят, что нашли нас рядом с домом на вашей платформе!</p>
+                                <a href="#contact" class="btn btn-sm btn-outline-primary">Узнать как для моего бизнеса</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-fancybox="gallery" data-caption="Привлечение клиентов в кофейню">
-                                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Пример Истории 2: Кофейня">
+                            <a href="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-fancybox="gallery" data-caption="Магазин одежды увеличил узнаваемость бренда в районе">
+                                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Пример Истории 2: Магазин одежды">
                              </a>
                             <div class="story-info">
-                                <h5>Кофейня "Ароматный Кофе"</h5>
-                                <p>С помощью [Ваше Название] мы смогли привлечь новых посетителей из окрестных районов и увеличить средний чек на 15%.</p>
-                               <a href="#contact" class="btn btn-sm btn-outline-primary">Начать продвижение</a>
+                                <h5>Магазин одежды "Модный Дворик"</h5>
+                                <p>Локальная реклама помогла нам стать известнее среди жителей района. Покупатели стали чаще приходить, увидев рекламу на платформе.</p>
+                               <a href="#contact" class="btn btn-sm btn-outline-primary">Узнать как для моего магазина</a>
                             </div>
                         </div>
                          <div class="swiper-slide">
-                             <a href="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" data-fancybox="gallery" data-caption="Рост заказов в местной пекарне">
-                                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Пример Истории 3: Пекарня">
+                             <a href="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" data-fancybox="gallery" data-caption="Салон красоты привлек новых клиентов из соседних домов">
+                                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Пример Истории 3: Салон красоты">
                              </a>
                             <div class="story-info">
-                                <h5>Пекарня "Свежий Хлеб"</h5>
-                                <p>[Ваше Название] помог нам рассказать о наших фирменных пирогах жителям района, что привело к увеличению заказов на 25%.</p>
-                                <a href="#contact" class="btn btn-sm btn-outline-primary">Начать продвижение</a>
+                                <h5>Салон красоты "Идеальный Образ"</h5>
+                                <p>Реклама салона на платформе стала отличным решением. Запись на услуги увеличилась, особенно от клиентов из близлежащих домов.</p>
+                                <a href="#contact" class="btn btn-sm btn-outline-primary">Узнать как для моего бизнеса</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                             <a href="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-fancybox="gallery" data-caption="Привлечение клиентов в салон красоты">
-                                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Пример Истории 4: Салон красоты">
+                             <a href="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-fancybox="gallery" data-caption="Сервис ремонта техники получил больше заказов в районе">
+                                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Пример Истории 4: Сервис ремонта">
                              </a>
                             <div class="story-info">
-                                <h5>Салон красоты "Очарование"</h5>
-                                <p>Мы получили новых клиентов на услуги маникюра и стрижек благодаря таргетированной рекламе через [Ваше Название].</p>
-                                <a href="#contact" class="btn btn-sm btn-outline-primary">Начать продвижение</a>
+                                <h5>Сервис по ремонту "ТехноДоктор"</h5>
+                                <p>Локальная реклама помогла нам увеличить количество заказов на ремонт от местных жителей. Теперь нас знают в округе!</p>
+                                <a href="#contact" class="btn btn-sm btn-outline-primary">Узнать как для моего бизнеса</a>
                             </div>
                         </div>
                     </div>
@@ -450,8 +539,8 @@
         <section id="testimonials" class="testimonials">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
-                    <h2 style="color: var(--white-text);">Отзывы Магазинов-Партнеров</h2>
-                    <p style="color: rgba(255, 255, 255, 0.8);">Узнайте, что говорят владельцы магазинов, которые уже воспользовались нашей платформой.</p>
+                    <h2 style="color: var(--white-text);">Мнения Владельцев Магазинов о Локальной Рекламе</h2>
+                    <p style="color: rgba(255, 255, 255, 0.8);">Послушайте, что говорят владельцы бизнесов, которые уже воспользовались нашей платформой для привлечения клиентов.</p>
                      <style> #testimonials .section-title h2::after { background: var(--accent-color); } </style>
                 </div>
 
@@ -462,10 +551,10 @@
                             <div class="testimonial-item">
                                 <img src="https://randomuser.me/api/portraits/men/32.jpg" class="testimonial-img" alt="Фото партнера 1">
                                 <h3>Игорь Семенов</h3>
-                                <h4>Владелец магазина электроники</h4>
+                                <h4>Владелец магазина "Цветы у Дома"</h4>
                                 <p>
                                     <i class="fas fa-quote-left quote-icon-left"></i>
-                                    [Ваше Название] стал для нас отличным инструментом для привлечения покупателей в наш магазин. Реклама работает, клиенты приходят, продажи растут. Рекомендую!
+                                    Локальная реклама на этой платформе - это то, что нужно для малого бизнеса! Клиенты идут, продажи растут. Очень доволен результатом.
                                     <i class="fas fa-quote-right quote-icon-right"></i>
                                 </p>
                             </div>
@@ -475,10 +564,10 @@
                             <div class="testimonial-item">
                                 <img src="https://randomuser.me/api/portraits/women/45.jpg" class="testimonial-img" alt="Фото партнера 2">
                                 <h3>Светлана Белова</h3>
-                                <h4>Владелица цветочного магазина</h4>
+                                <h4>Владелица салона красоты "Шарм"</h4>
                                 <p>
                                     <i class="fas fa-quote-left quote-icon-left"></i>
-                                    Очень довольны сотрудничеством с [Ваше Название]. Платформа помогла нам рассказать о наших уникальных букетах и привлечь новых клиентов для доставки цветов по городу.
+                                    Раньше не знала, как привлекать клиентов из соседних домов. Локальная реклама на вашей платформе решила эту проблему! Спасибо за новых клиентов!
                                     <i class="fas fa-quote-right quote-icon-right"></i>
                                 </p>
                             </div>
@@ -488,10 +577,10 @@
                             <div class="testimonial-item">
                                 <img src="https://randomuser.me/api/portraits/men/61.jpg" class="testimonial-img" alt="Фото партнера 3">
                                 <h3>Андрей Волков</h3>
-                                <h4>Директор мебельного салона</h4>
+                                <h4>Директор автосервиса "АвтоМастер"</h4>
                                 <p>
                                     <i class="fas fa-quote-left quote-icon-left"></i>
-                                   Благодаря [Ваше Название] мы смогли увеличить поток посетителей в наш мебельный салон. Особенно эффективно сработала реклама на новые коллекции. Спасибо за помощь!
+                                   Отличный способ рассказать о нашем сервисе тем, кто живет или работает рядом. Заявок стало больше, особенно от местных автовладельцев. Рекомендую!
                                     <i class="fas fa-quote-right quote-icon-right"></i>
                                 </p>
                             </div>
@@ -507,8 +596,8 @@
         <section id="contact" class="contact">
             <div class="container">
                  <div class="section-title" data-aos="fade-up">
-                    <h2>Станьте Партнером и Начните Привлекать Клиентов Уже Сегодня!</h2>
-                    <p>Отправьте нам ваш прайс-лист, и мы свяжемся с вами для обсуждения деталей сотрудничества.</p>
+                    <h2>Станьте Партнером и Привлекайте Клиентов Прямо Сейчас!</h2>
+                    <p>Готовы увеличить поток клиентов в Ваш магазин? Заполните форму, и мы свяжемся с Вами для обсуждения деталей сотрудничества!</p>
                 </div>
 
                 <div class="row gy-4">
@@ -517,7 +606,7 @@
                             <div class="address contact-info">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
-                                    <h4>Наш адрес:</h4>
+                                    <h4>Наш Офис:</h4>
                                     <p>ул. Примерная, д. 10, офис 505,<br>г. Москва, 123456</p>
                                 </div>
                             </div>
@@ -553,19 +642,19 @@
                                 </div>
                             </div>
                              <div class="form-group mb-3">
-                                <label for="company" class="form-label">Название вашего магазина</label>
+                                <label for="company" class="form-label">Название Вашего Магазина/Бизнеса</label>
                                 <input type="text" class="form-control" name="company" id="company" required data-parsley-minlength="2" data-parsley-trigger="change">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="subject" class="form-label">Тема (Партнерство)</label>
-                                <input type="text" class="form-control" name="subject" id="subject" value="Запрос на партнерство" readonly required data-parsley-minlength="5" data-parsley-trigger="change">
+                                <label for="subject" class="form-label">Тема (напр., Запрос на локальную рекламу)</label>
+                                <input type="text" class="form-control" name="subject" id="subject" required data-parsley-minlength="5" data-parsley-trigger="change">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="message" class="form-label">Кратко опишите ваш магазин и что вы предлагаете</label>
+                                <label for="message" class="form-label">Кратко опишите Ваш бизнес и что Вы предлагаете</label>
                                 <textarea class="form-control" name="message" rows="5" id="message" required data-parsley-minlength="10" data-parsley-trigger="change"></textarea>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Отправить Заявку на Партнерство</button>
+                                <button type="submit" class="btn btn-primary">Отправить Заявку на Рекламу</button>
                             </div>
                         </form>
                     </div>
@@ -583,7 +672,7 @@
                       <a href="#hero" class="footer-logo d-inline-block">
                            <img src="https://cdn.glitch.global/a2a85e01-02b1-4df6-8a9f-678047d53743/ikeber.svg?v=1743845475305" alt="Ikeber Logo Footer">
                       </a>
-                      <p>[Ваше Название] - платформа для продвижения вашего локального бизнеса. Привлекаем клиентов к вашим товарам и услугам.</p>
+                      <p>Платформа для эффективной локальной рекламы. Помогаем магазинам и бизнесам находить клиентов рядом.</p>
                       <div class="social-links mt-3">
                         <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
@@ -595,7 +684,7 @@
 
             <div class="copyright">
                 © Copyright <strong id="copyright-year"></strong> <span>[Ваше Название Платформы / Ikeber Partners]</span>. Все права защищены.
-                 <br>Дизайн разработан с <i class="fas fa-heart"></i>
+                 <br>Разработано с <i class="fas fa-heart"></i>
             </div>
         </div>
     </footer><!-- End Footer -->
@@ -603,7 +692,7 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
 
 
-    <!-- === CDN Libraries: JavaScript (Оставляем без изменений) === -->
+    <!-- === CDN Libraries: JavaScript (Без изменений) === -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -611,11 +700,13 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <!-- Parsley требует jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/i18n/ru.min.js" integrity="sha512-Lb8P0J1QvRUQ3U6t8XlnZ9W0888/xHVZFLoUfPLzz8c456Q9Y9fJ9oG/fI9h+0s/wxtkU5vj7jE4G+yHqPqOqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-    <!-- === Custom JavaScript (Вносим минимальные правки) === -->
+    <!-- === Custom JavaScript (С исправлениями) === -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
@@ -625,6 +716,7 @@
             if (typedElement) {
                 let typed_strings = typedElement.getAttribute('data-typed-items');
                 typed_strings = typed_strings.split(',');
+                typed_strings = typed_strings.map(s => s.trim()); // Убираем лишние пробелы
                 new Typed('.typed', {
                     strings: typed_strings,
                     loop: true,
@@ -712,31 +804,29 @@
 
                     if (parsleyInstance.isValid()) {
                         formMessage.textContent = 'Отправка заявки...';
-                        formMessage.className = 'alert alert-info';
-                        formMessage.style.display = 'block';
+                        formMessage.className = 'alert alert-info d-block'; // Используем d-block
+                        // formMessage.style.display = 'block';
 
-                        // --- ИМИТАЦИЯ ОТПРАВКИ ---
-                        // Замените этот setTimeout на ваш реальный AJAX/Fetch запрос
                         setTimeout(() => {
-                            formMessage.textContent = 'Ваша заявка на партнерство успешно отправлена! Мы скоро свяжемся с вами.';
-                            formMessage.className = 'alert alert-success success-message';
+                            formMessage.textContent = 'Ваша заявка на рекламу успешно отправлена! Мы скоро свяжемся с вами.';
+                            formMessage.className = 'alert alert-success success-message d-block';
                             contactForm.reset();
                             parsleyInstance.reset();
                         }, 2000);
-                        // --- КОНЕЦ ИМИТАЦИИ ---
 
                     } else {
                         formMessage.textContent = 'Пожалуйста, проверьте правильность заполнения полей формы.';
-                        formMessage.className = 'alert alert-danger error-message';
-                        formMessage.style.display = 'block';
+                        formMessage.className = 'alert alert-danger error-message d-block';
+                       // formMessage.style.display = 'block';
                     }
                 });
 
                  contactForm.querySelectorAll('input, textarea').forEach(input => {
                      input.addEventListener('input', () => {
-                         if (formMessage.textContent !== '' && formMessage.textContent !== 'Отправка заявки...') {
+                         if (formMessage.classList.contains('d-block') && formMessage.textContent !== 'Отправка заявки...') {
                              formMessage.textContent = '';
-                             formMessage.style.display = 'none';
+                             formMessage.className = formMessage.className.replace(' d-block', ''); // Убираем d-block
+                             // formMessage.style.display = 'none';
                          }
                      });
                  });
